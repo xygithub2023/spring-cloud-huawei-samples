@@ -4,7 +4,7 @@ server:
 # Profile：注册中心类型：cse/nacos
 spring:
   profiles:
-    active: cse
+    active: nacos
 
   application:
     # 微服务名称。 微服务名称定义好以后，后续不能变更。
@@ -59,11 +59,11 @@ spring:
     nacos:
       discovery:
         enabled: true
-        server-addr: http://127.0.0.1:8848
+        server-addr: nacos-qv2kue.nacos.cse.com
         service: ${spring.application.name}
       config:
         enabled: true
-        server-addr: http://127.0.0.1:8848
+        server-addr: nacos-qv2kue.nacos.cse.com
         file-extension: yaml
         shared-configs[0]:
           data-id: provider.yaml
